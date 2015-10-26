@@ -1,0 +1,1 @@
+<i class="menu-icon fa fa-$Icon.Icon" title="$Icon.Title"></i>

@@ -1,0 +1,23 @@
+{
+  "name": "exadium/gridfield-icon-row-class",
+  "description": "SilverStripe module to add (fontawesome) icons and classes to rows in GridFields",
+  "type": "silverstripe-module",
+  "homepage": "https://github.com/marijnkampf/GridField-Icon-Row-Class",
+  "keywords": ["silverstripe", "gridfield", "module", "colour", "color", "icons"],
+  "authors": [
+    {"name": "Marijn Kampf","email": "info@exadium.com"}
+  ],
+  "support": {
+    "issues": "https://github.com/marijnkampf/GridField-Icon-Row-Class/issues"
+  },
+  "require": {
+    "silverstripe/cms": "~3.1",
+    "silverstripe/framework": "~3.1"
+  },
+  "extra": {
+    "installer-name": "gridfield-icon-row-class",
+    "screenshots": [
+      "http://http://www.exadium.com/assets/external/silverstripe-gridfield-icon-row-class-module.png"
+    ]
+  }
+}
