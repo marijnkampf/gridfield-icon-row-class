@@ -15,7 +15,7 @@ or
 
 ## Installation
 
-* composer require "exadium/gridfield-icon-row-class": "*"
+* composer require "exadium/gridfield-icon-row-class": "dev-master"
 
 ## Usage
 The example below adds icons for Members in the Administrators and Content Authors groups in the Security page of the default SilverStripe CMS installation.
@@ -30,13 +30,13 @@ Member:
 
 mysite\code\CustomMembers.php
 ````
-    <?php
+<?php
 
-    class CustomMember extends DataExtension {
-    	public function GridFieldIconRowClasses() {
-    		if ($this->owner->inGroup("administrators")) $this->owner->addGridFieldIconRowClass("user-plus", "Administrator");
-    		if ($this->owner->inGroup("content-authors")) $this->owner->addGridFieldIconRowClass("pencil-square-o", "Content author");
-    		return $this->owner->gridFieldIconColour;
-    	}
-    }
+class CustomMember extends DataExtension {
+	public function GridFieldIconRowClasses() {
+		if ($this->owner->inGroup("administrators")) $this->owner->addGridFieldIconRowClass("user-plus", "Administrator");
+		if ($this->owner->inGroup("content-authors")) $this->owner->addGridFieldIconRowClass("pencil-square-o", "Content author");
+		return $this->owner->gridFieldIconColour;
+	}
+}
 ````
