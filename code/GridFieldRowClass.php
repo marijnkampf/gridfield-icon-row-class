@@ -1,23 +1,11 @@
 <?php
-class GridFieldRowClass extends GridField {
-	protected function newRowClasses($total, $index, $record) {
-		$classes = array('ss-gridfield-item');
 
-		if($index == 0) {
-			$classes[] = 'first';
-		}
-
-		if($index == $total - 1) {
-			$classes[] = 'last';
-		}
-
-		$classes[] = ($index % 2) ? 'even' : 'odd';
-
-		if ($record->hasMethod("GridFieldIconColours")) {
+class GridFieldRowClass extends DataExtension {
+	public function getRowClasses(&$classes, &$total, &$index, &$record) {
+		if ($record->hasMethod("GridFieldIconRowClasses")) {
 			$alerts = array();
-			if ($record->GridFieldIconColours()) foreach($record->GridFieldIconColours() as $alert) $alerts[] = $alert->Level;
-			$classes = array_merge($classes, $alerts);
+			if ($record->GridFieldIconRowClasses()) foreach($record->GridFieldIconRowClasses() as $alert) $classes[] = $alert->Class;
 		}
-		return $classes;
+//Debug::Show(print_r($classes, true));
 	}
 }
