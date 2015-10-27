@@ -2,6 +2,8 @@ GridField Icon and Row Class
 =================
 Adds icons and CSS row classes to DataObjects displayed in GridFields. Enables styling of rows depending on conditions. Example at bottom of README.md uses different colours for rows.
 
+![Screenshot of sample Members GridField with group icons and coloured coded rows](http://www.exadium.com/assets/external/silverstripe-gridfield-icon-row-class-module.png)
+
 ## Maintainer Contact
 * Marijn Kampf ([Exadium](https://github.com/marijnkampf/GridField-Icon-Row-Class))
 
