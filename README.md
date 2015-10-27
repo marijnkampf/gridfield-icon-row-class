@@ -56,7 +56,7 @@ to framework/form/gridfield/GridField.php
 ## Usage
 The example below adds icons for Members in the Administrators and Content Authors groups in the Security page of the default SilverStripe CMS installation. It also adds colour (using CSS class) to Member rows depending on their group. Note that the order of the CSS declarations ensures that high priority colours are shown even when multiple groups are assigned.
 
-mysite\_config\config.yml
+mysite/_config/config.yml
 ````
 Member:
   extensions:
@@ -64,7 +64,7 @@ Member:
     - DataObjectIconRowClassExtension
 ````
 
-mysite\code\CustomMembers.php
+mysite/code/CustomMembers.php
 ````
 <?php
 
