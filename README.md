@@ -15,45 +15,6 @@ or
 ## Installation
 * composer require "exadium/gridfield-icon-row-class": "dev-master"
 
-## Notes
-I have added a pull request https://github.com/silverstripe/silverstripe-framework/pull/4711 to GridField.php, but until it's accepted you need to add a line to enable styling of rows. Adding icons works without any changes to core files.
-
-Add line:
-````
-		$this->owner->extend('getRowClasses', $classes, $total, $index, $record);
-````
-to framework/form/gridfield/GridField.php
-````
-	/**
-	 * @param int $total
-	 * @param int $index
-	 * @param DataObject $record
-	 *
-	 * @return array
-	 */
-	protected function newRowClasses($total, $index, $record) {
-		$classes = array('ss-gridfield-item');
-
-		if($index == 0) {
-			$classes[] = 'first';
-		}
-
-		if($index == $total - 1) {
-			$classes[] = 'last';
-		}
-
-		if($index % 2) {
-			$classes[] = 'even';
-		} else {
-			$classes[] = 'odd';
-		}
-		
-		// Add line here:
-		$this->owner->extend('getRowClasses', $classes, $total, $index, $record);
-
-		return $classes;
-	}
-````
 
 ## Usage
 The example below adds icons for Members in the Administrators and Content Authors groups in the Security page of the default SilverStripe CMS installation. It also adds colour (using CSS class) to Member rows depending on their group. Note that the order of the CSS declarations ensures that high priority colours are shown even when multiple groups are assigned.
@@ -90,7 +51,7 @@ CSS
 	public function GridFieldIconRowClasses() {
 		if ($this->owner->inGroup("administrators")) $this->owner->addGridFieldIconRowClass("user-plus", "Administrator", "red");
 		if ($this->owner->inGroup("content-authors")) $this->owner->addGridFieldIconRowClass("pencil-square-o", "Content author", "amber");
-		return $this->owner->gridFieldIconColour;
+		return $this->owner->GridFieldIconRowClasses;
 	}
 }
 ````
