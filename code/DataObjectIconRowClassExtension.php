@@ -27,7 +27,7 @@ class DataObjectIconRowClassExtension extends DataExtension
             return $this->owner->GridFieldIconRowClasses;
         }
         $this->owner->GridFieldIconRowClasses = $this->owner->initGridFieldIconRowClass();
-        $this->owner->extend('GridFieldIconRowClasses', $this->owner->GridFieldIconRowClasses);
+        $this->owner->extend('GridFieldIconRowClassesUpdate', $this->owner->GridFieldIconRowClasses);
     }
 
     public function addGridFieldIconRowClass($icon, $title = null, $class = null)
