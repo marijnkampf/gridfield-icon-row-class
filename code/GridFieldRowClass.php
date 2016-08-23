@@ -2,7 +2,7 @@
 
 class GridFieldRowClass extends DataExtension
 {
-    public function getRowClasses(&$classes, &$total, &$index, &$record)
+    public function updateNewRowClasses(&$classes, &$total, &$index, &$record)
     {
         if ($record->hasMethod("GridFieldIconRowClasses")) {
             $alerts = array();
