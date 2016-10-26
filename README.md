@@ -87,7 +87,7 @@ CSS
 );
 	}
 
-	public function GridFieldIconRowClasses() {
+	public function GridFieldIconRowClassesUpdated() {
 		if ($this->owner->inGroup("administrators")) $this->owner->addGridFieldIconRowClass("user-plus", "Administrator", "red");
 		if ($this->owner->inGroup("content-authors")) $this->owner->addGridFieldIconRowClass("pencil-square-o", "Content author", "amber");
 		return $this->owner->gridFieldIconColour;
