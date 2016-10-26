@@ -3,7 +3,7 @@ class GridFieldIconRowClass extends DataObject
 {
     public function requireTable()
     {
-        DB::dontRequireTable($this->class);
+        DB::dont_require_table($this->class);
     }
 
     private static $db = array(
